@@ -1,4 +1,8 @@
 # Starter pipeline
+- task: DotNetCoreCLI@2
+  inputs:
+    azureSubscription: 'Free Trial(9facf577-1995-4354-b480-1c1148e24d64)'
+    command: 'build'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
