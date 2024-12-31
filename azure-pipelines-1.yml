@@ -1,0 +1,22 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  name: 'Azure Pipelines' # Replace with your self-hosted agent pool name
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildJob
+    steps:
+    - script: echo "Building the project"
+      displayName: "Build Step"
+
+- stage: Deploy
+  jobs:
+  - job: DeployJob
+    steps:
+    - script: echo "Deploying the project"
+      displayName: "Deploy Step"
